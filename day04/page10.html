@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn1{
+            color: blue;
+            background: pink;
+        }
+        #btn2{
+            color: white;
+            background: lime;
+        }
+        #result1{
+            color: blue;
+        }
+    </style>
+    <script>
+        function hello() {
+            alert("여러분 2시간 있으면 끝나요~!")
+        }
+        function bye() {
+            alert("드디어 끝났어요!! 안녕히가세요~~")
+        }
+        function check() {
+            id = "root"
+            pw = "1234"
+            id2 = document.getElementById('id2').value //"root"
+            pw2 = document.getElementById('pw2').value //"1234"
+            //id2가 id와 일치, pw2가 pw와 일치 둘다 만족하면 로그인성공
+            result = document.getElementById('result')
+            if(id2==id && pw2==pw){
+                //alert("로그인 되었습니다")
+                result.innerHTML = "<font color=red>로그인 성공!!!</font> <img src='success.png' width=100 height=100>"
+            }else{
+                //alert("로그인 실패!")
+                //result안에 오른쪽에 있는 내용을 html코드로 안쪽에 집어넣기
+                result.innerHTML = "<font color=red>로그인 실패!!</font> <img src='fail.png' width=100 height=100>"
+            }
+        }
+        function checkID() {
+            result1 = document.getElementById('result1')
+            id_length = document.getElementById('id2').value.length
+            if(parseInt(id_length) < 5)
+                result1.innerHTML = "<font color=red>5글자 이상 입력되어야 합니다</font>"
+            else
+                result1.innerHTML = id_length + "<font color=blue>글자 입니다.</font>"
+        }
+        function checkPW() {
+            result2 = document.getElementById('result2')
+            pw1 = document.getElementById('pw2').value //"root"
+            pw2 = document.getElementById('pw3').value //"root"
+
+            if(pw1 == pw2)
+                result2.innerHTML = "<font color=green size=20 >일치!!!</font> <img src='success.png' width=100 height=100>"
+            else
+                result2.innerHTML = "<font color=red size=20>불일치!!!</font> <img src='fail.png' width=100 height=100>"
+        }
+    </script>
+</head>
+<body>
+    <button onclick="hello()">인사처리</button>
+    <button onclick="bye()">안녕처리</button>
+    <hr color="red">
+    <table>
+        <tr>
+            <td>아이디 : </td>
+            <td><input type="text" id="id2" value ="test"> <button onclick="checkID()" id="btn1">글자수 체크</button></td>
+        </tr>
+        <tr>
+            <td>패스워드 : </td>
+            <td><input type="password" id="pw2" value ="test"></td>
+        </tr>
+        <tr>
+            <td>패스워드2 : </td>
+            <td><input type="password" id="pw3" value ="test"> <button onclick="checkPW()" id="btn2">패스워드 동일</button></td>
+        </tr>
+    </table>
+    <!--<button onclick="check()">로그인처리</button>-->
+    <div id="result1">
+        <!--결과 들어갈 곳.--> 
+    </div>
+    <div id="result2">
+        <!--결과2 들어갈 곳.--> 
+    </div>
+</body>
+</html>

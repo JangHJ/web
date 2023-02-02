@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        for (let index = 0; index < 3; index++) {
+            console.log("@@@")
+        }
+
+        site = prompt("당신이 주로 가는 포털사이트는? ex)naver, daum, google")
+        if(site == "naver")
+            location.href = "http://www.naver.com"
+        else if(site == "daum")
+            location.href = "http://www.daum.net"
+        else if(site == "google")
+            location.href = "http://www.google.com"
+        else
+            console.log("해당 사이트는 없는 사이트입니다.")
+
+
+        answer = confirm("당신은 자바 프로그래머인가요?")
+        if(answer == true)
+            console.log("훌륭한 웹프로그래머시군요")
+        else
+            console.log("다른 언어를 사용하시는군요!")
+            
+    </script>
+    <script src="out2.js"></script>
+</head>
+<body>
+    
+</body>
+</html>
