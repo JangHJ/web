@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메인페이지2</title>
+  <link rel="stylesheet" href="design.css">
+  <script>
+    function tomain() {
+      location.href = "main.html"
+    }
+  </script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", { packages: ["corechart"] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['calorie', 'percentage'],
+        ['탄수화물', 53],
+        ['지방', 42],
+        ['단백질', 5]
+      ]);
+
+      var options = {
+        legend: 'none',
+        pieSliceText: 'label',
+        //title: 'Swiss Language Use (100 degree rotation)',
+        //pieStartAngle: 100,
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+
+<body>
+  <div id="food">
+    <button id="btn1" onclick="tomain()" style="width: 100px; height: 50px;">Prev</button><br><br>
+    <div id="pad" style="width: 300px; height: 40px; background: orange;">
+      <font>롯데 구구콘</font>
+    </div>
+    <img src="gugu.jpg" alt="구구콘 이미지" style="width: 300px; height: 400px;">
+  </div>
+  <div id="table">
+    <ol>
+      <li>
+        <table border="1">
+          <tr>
+            <td>칼로리</td>
+            <td>지방</td>
+            <td>탄수화물</td>
+            <td>단백질</td>
+          </tr>
+          <tr>
+            <td>305</td>
+            <td>14g</td>
+            <td>40g</td>
+            <td>4g</td>
+          </tr>
+        </table>
+      </li><br>
+      <li>
+        제품명 : 구구콘<br>
+        축산물 가공품의 유형 : 아이스크림 (유지방 9%) <br>
+        제조일 : 뚜껑에 표시 <br>
+        용량 : 160ml <br>
+        제조원 : 롯데푸드(주) <br>
+        충청남도 천안시 서북구 2공단 4로 19
+      </li>
+    </ol>
+  </div>
+  <div id="piechart" style="width: 400px; height: 400px;"></div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+body{
+    font-size: 30px;
+    font-family: 'LINESeedKR-Bd';
+}
+.Linefont{
+    font-size: 25px;
+    font-family: 'LINESeedKR-Bd';
+}
+a{
+    text-decoration: none;
+}
+#btn1{
+    background: lightgray;
+    color: black;
+    border-radius: 40%;
+}
+#btn2{
+    background: orange;
+    color: black;
+    border-style: dashed;
+}
+#body1{
+    align-content: center;
+}
+font{
+    text-align: center;
+}
+#pad{
+    margin-bottom: 10px;
+}
+#table{
+    text-align: center;
+    font-size: 25px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+ol{
+    text-align: left;
+}
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+/* 
+    []- 대괄호, {}- 중간괄호, ()- 소괄호 
+    : - 콜론, ; - 세미콜론
+*/
